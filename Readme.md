@@ -6,7 +6,7 @@
 - [Julia](#Julia)
 ---
 ### Preface
-This is a simple programming **tutorial** note originally create for the course **Mathematical Modeling Data Analysisc** given by Prof. Chen GU📝📸💻🎸 at [Tsinghua University](https://www.tsinghua.edu.cn/), including **Julia**, **Python** and **matlab**. But it also serves as a valuable resource for beginners looking to get started with these languages.
+This is a simple programming **tutorial** note originally create for the course **Mathematical Modeling Data Analysisc** 📝📸💻🎸 given by Prof. Chen GU at [Tsinghua University](https://www.tsinghua.edu.cn/), including **Julia**, **Python** and **matlab**. But it also serves as a valuable resource for beginners looking to get started with these languages.
 
 You can **manually type and run** all of the code **line by line** to practice basic Julia, Python, or Matlab programming in specific environments.
 
