@@ -6,11 +6,11 @@
 - [Julia](#Julia)
 ---
 ### Preface
-This is a simple programming **tutorial** note originally for the course Mathematical Modeling Data Analysisc📝📸💻🎸 at [Tsinghua University](https://www.tsinghua.edu.cn/), including **Julia**, **Python** and **matlab**.
+This is a simple programming **tutorial** note originally create for the course **Mathematical Modeling Data Analysisc** given by Prof. Chen GU📝📸💻🎸 at [Tsinghua University](https://www.tsinghua.edu.cn/), including **Julia**, **Python** and **matlab**. But it also serves as a valuable resource for beginners looking to get started with these languages.
 
 You can **manually type and run** all of the code **line by line** to practice basic Julia, Python, or Matlab programming in specific environments.
 
-I recommend to use **jupyter notebook** to learn Julia and Python code.
+I recommend using **jupyter notebook** to learn Julia and Python code.
 
 ---
 
@@ -391,16 +391,16 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
 - Conditional statements
 
   ```python
-  number = eval(input('你的彩票号码是：'))
+  number = eval(input('Your lottery number is：'))
   if number == 456456:
-  		print('中奖啦')
+  		print('Won the lottery!')
   else:
-  		print('很遗憾')
+  		print('It's a pity.')
   ```
 
   - 'if' can be nested 
 
-- data structure
+- Data structure
 
   - number, tuple, list, dict, set
 
@@ -422,7 +422,7 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   scores = {1, 2, 3} # set
   ```
 
-- packages
+- Packages
 
   ```python
   import numpy as np
@@ -456,22 +456,17 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   plt.show()
   ```
 
-### 0.3 Julia
+### Julia
 
-在Julia中按”]”，然后add 需要的包（IJulia等）
+In Julia, press ] to enter the package manager mode, and then use add to install the necessary packages (e.g., 'IJulia').
 
-- 小试牛刀
+- A small trial
 
   ```julia
   println("Hello world!")
   ```
 
-- Jupyter notebook的快捷命令
-
-  - 键盘tab+a、tab+b分别在上面或下面加一个cell
-  - 键盘shift+enter运行
-
-- 变量
+- Variables
 
   ```julia
   my_answer = 42
@@ -482,11 +477,11 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   
   typeof(my_pi)
   
-  pi # Julia里自己也有pi
+  pi # In Julia, there is also 'pi' available.
   
   alpha = 1
   
-  \alpha(press "tab") = 1 # Julia里可以用希腊字母以及表情🐱（卡通图案），可以欢乐
+  \alpha(press "tab") = 1 # In Julia, you can use Greek letters as well as emojis like 🐱 (cartoon patterns), which can make things fun.
   
   \beta = 2
   
@@ -501,7 +496,7 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   🍎 + 🍑 == 🍌
   ```
 
-- 基本运算
+- Basic computations
 
   ```julia
   sum = 3 + 7
@@ -511,19 +506,19 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   modulus = 10%2
   ```
 
-- 数据结构
+- Data structures
 
   ```julia
-  # 元组tuple
+  # tuple
   myfavoriteanimals=("dog", "cat", "monkey")
   myfavoriteanimals[1] # "dog"
-  # tuple元素不能更改
+  # tuple elements cannot be changed
   
   # NamedTuples
   myfavoriteanimals = (bird="penguins", mamal="cats")
   myfavoriteanimals.bird # "penguins"
   
-  # 字典Dict，key、value对儿
+  # Dict，key & value pairs
   myphonebook = Dict(
   	"Chen" => "111-222-3333",
   	"Gu" => "444-555-6666")
@@ -534,19 +529,19 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   		println(key, "->", myphonebook[key])
   end
   
-  # 数组Arrays
+  # Arrays
   fibonacci = ]1, 1, 2, 3, 5, 8, 13]
   mix = [1, 1, 2, 3, "chen", "gu"]
   
-  push!(mix, "5") # 末尾加个字符串"5"
-  pop!(mix) # pop出末尾元素
+  push!(mix, "5") # add '5' in the end
+  pop!(mix) # pop out the number in the end
   
-  # 二维数组（矩阵）、三维数组
+  # 2D array (matrix), 3D array
   rand(4,3)
   rand(4,3,2)
   ```
 
-- 循环Loops
+- Loops
 
   ```julia
   myTAs = ["aa", "bb", "cc", "dd"]
@@ -566,25 +561,25 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   end
   ```
 
-- 一些生成矩阵的方法
+- Some methods for generating matrices
 
   ```julia
   m,n = 5, 5
   A = fill(0, (m,n))
   
   B = fill(0, (m,n))
-  for j in 1:n, i in 1:m # 比过往语言两层for简洁
+  for j in 1:n, i in 1:m # more concise than two layers of for loops in previous languages
   				B[i,j] = i + j
   		end
   end
   A
   
-  C = [i + j for i \in 1:m, j \in 1:n] # 更简洁
+  C = [i + j for i \in 1:m, j \in 1:n] # more concise
   
   square_arr = [x^2 for x in 1:100]
   ```
 
-- 条件判断Conditionals
+- Conditionals
 
   ```julia
   N = 15
@@ -596,12 +591,12 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   		println("Buzz")
   end
   
-  # 支持a ? b : c语法
+  # support a ? b : c
   x, y = 3, 4
-  (x>y) > x : y # 取较大值
+  (x>y) > x : y # take the bigger one
   ```
 
-- 函数Functions
+- Functions
 
   ```julia
   function sayhi(name)
@@ -615,13 +610,13 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   sayhi(16)
   sayhi("xiaoming")
   
-  sayhi2 = name -> println("haha $name") # 匿名的函数
+  sayhi2 = name -> println("haha $name") # anonymous function
   sayhi2("monkey")
   
-  map(sayhi2, [1,2,3]) # map函数可以放入函数作为参数
-  map(x->x^3, [1,2,3]) # 可以放匿名的函数
+  map(sayhi2, [1,2,3]) # The 'map' function can accept a function as an argument" in English.
+  map(x->x^3, [1,2,3]) # An anonymous function can be accepted.
   
-  # 加一个点.
+  # with or without a point '.'
   function f(x)
   		x^2
   end
@@ -633,7 +628,7 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   f.(v) # element-wise
   ```
 
-- 包Packages
+- Packages
 
   ```julia
   using ToeplitzMatrices
@@ -644,26 +639,26 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   SymmetricToeplitz(v)
   
   using SpecialMatrices
-  K10 = Strang(10) # 因为这本书是Gilbert Strang写的，所以他把自己名字定义成了K矩阵
+  K10 = Strang(10) # Because this book (Introduction to Linear Algebra) was written by Gilbert Strang, he defined his name as the K matrix.
   
   # Solving Ku=f
   
   using LinearAlgebra
   
-  lu(K10) # lu分解
+  lu(K10) # lu decomposition
   
-  svd(K10) # svd分解
+  svd(K10) # svd decomposition
   
-  det(K10) # 求det
+  det(K10) # compute det
   
-  import Pkg; Pkg.add("BenchmarkTools") # 现场装一下这个包
+  import Pkg; Pkg.add("BenchmarkTools") # install this package here
   using BenchmarkTools
   
   F = ones(10,1)
-  u = K10\f # 直接得到结果
+  u = K10\f # get the result directly
   ```
 
-- 作图Plotting
+- Plotting
 
   ```julia
   using Plots
@@ -672,21 +667,15 @@ I recommend to use **Jupyter Notebook** to learn **Python** programming.
   
   plot(numpirates, globaltemperatures, label = "line", lw = 1, color = :red)
   scatter!(numpirates, globaltemperatures, label = "points")
-  # 感叹号意味着在原图上加画一个图
+  # An exclamation mark means adding a plot to the original figure.
   xlabel!("Number of Pirates")
   ylabel!("Global Temperature (C)")
   title!("Influence of pirate population on...")
   
-  heatmap(K10, color = :blues) # 可以用heatmap看矩阵
+  heatmap(K10, color = :blues) # You can use a heatmap to view the matrix.
   ```
 
 - Julia is fast
 
-  - 代码略
-
-## Python
-
-
-
-## Julia
+  - Code omitted.
 
