@@ -314,11 +314,11 @@ I recommend to use **jupyter notebook** to learn Julia and Python code.
   - clear % clear variables
   - clc % clear the command line
 
-### 0.2 Python
+### Python
 
-如果没有安装其他东西，可以用python自带的IDLE（不推荐），pycharm，jupyter notebook都可以用，今天主要用jupyter notebook讲解。
+I recommend to use **Jupyter Notebook** to learn **Python** programming.
 
-- 语法比较自然
+- The language is 'natural'.
 
   ```python
   x = 3
@@ -327,21 +327,21 @@ I recommend to use **jupyter notebook** to learn Julia and Python code.
   print(x, y)
   ```
 
-- 变量交换
+- Variable exchange
 
   ```python
-  # 不简洁的方法
+  # not brief method
   z = x
   x = y
   y = z
   print(x, y)
   
-  # 更简洁的方法
+  # brief method
   x, y = y, x
   print(x, y)
   ```
 
-- 单、双、三引号
+- Single, double, and triple quotes
 
   ```python
   print('"123"')
@@ -351,7 +351,7 @@ I recommend to use **jupyter notebook** to learn Julia and Python code.
   !''')
   ```
 
-- 定义函数（注意**缩进**）
+- Define functions (Note the **indentation**)
 
   ```python
   def plus(x,y):
@@ -361,25 +361,25 @@ I recommend to use **jupyter notebook** to learn Julia and Python code.
   plus(1,100)
   ```
 
-- 循环
+- Loop
 
   ```python
   for i in 'hello':
-  		print(i, end = ' ') # end不写默认是换行符\n
+  		print(i, end = ' ') # In Python, if you do not specify the end parameter in a print() function, it defaults to a newline character \n.
   ```
 
-- range
+- Range
 
   ```python
-  range(1, 10, 2) # 1, 3, 5, 7, 9，范围1~9（range包括左边不包括右边），步长step=2
+  range(1, 10, 2) # 1, 3, 5, 7, 9，generates a sequence of numbers starting from 1 up to (but not including) 10, with a step of 2. 
   
   s = 0
   for i in range(1, 10, 2):
-  		s += i # 就是s = s + i
+  		s += i # means s = s + i
   print(s)
   ```
 
-- 循环嵌套
+- Nested loops
 
   ```python
   for i in range(1,4):
@@ -388,7 +388,7 @@ I recommend to use **jupyter notebook** to learn Julia and Python code.
   		print()
   ```
 
-- 判断语句
+- Conditional statements
 
   ```python
   number = eval(input('你的彩票号码是：'))
@@ -398,9 +398,9 @@ I recommend to use **jupyter notebook** to learn Julia and Python code.
   		print('很遗憾')
   ```
 
-  - if也可以嵌套
+  - 'if' can be nested 
 
-- 数据结构
+- data structure
 
   - number, tuple, list, dict, set
 
@@ -408,40 +408,40 @@ I recommend to use **jupyter notebook** to learn Julia and Python code.
   s = 100
   x = 99.36
   
-  ss = (1,2,3) # 元组tuple 元素不能更改
+  ss = (1,2,3) # tuple, in which the elements cannot be changed
   m = ss[1]
-  print(m) # ss[0]是1
+  print(m) # ss[0] is 1
   
-  ss = [1,2,3] # 列表list 元素可以更改
-  ss.append(4) # 在末尾添加一个数4
+  ss = [1,2,3] # list, in which elements can be changed
+  ss.append(4) # add 4 in the end
   print(ss)
   
-  xx = {'Mike':23, 'Tom':19} # 字典dict
+  xx = {'Mike':23, 'Tom':19} # dict: dictionary
   print(xx['Mike'])
   
-  scores = {1, 2, 3} # 集合set
+  scores = {1, 2, 3} # set
   ```
 
-- 包package
+- packages
 
   ```python
   import numpy as np
-  import scipy.linalg as la # 有很多线性代数功能
-  f = np.array([[0,1],[1,2]]) # 矩阵
-  f2 = la.inv(f) # inv求逆
+  import scipy.linalg as la # it have many functions in linear algebra
+  f = np.array([[0,1],[1,2]]) # matrix
+  f2 = la.inv(f) # inverse
   print(f2)
-  la.lu(f) # LU分解
+  la.lu(f) # LU decomposition
   
-  # toesplitz矩阵
+  # toesplitz matrices
   m = np.zeros([1, 25])
   m[0,0] = 2
   m[0,1] = -1
   k = la.toeplitz(m)
   print(k)
   
-  b = la.kron(a1, k) + la.kron(k, a1) # la里有各种运算，用到的时候再查即可
+  b = la.kron(a1, k) + la.kron(k, a1) # Various operations are available. You can look up specific operations as needed.
   
-  import matplotlib.pyplot as plt # 用于画图
+  import matplotlib.pyplot as plt # for plotting
   
   x = [1 ,2 ,3 ,4]
   y = [1 ,2 ,3 ,4]
